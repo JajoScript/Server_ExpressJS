@@ -1,0 +1,20 @@
+{
+  "name": "express_testing",
+  "version": "1.0.0",
+  "description": "este es un proyecto con express",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "dev": "nodemon ."
+  },
+  "keywords": [],
+  "author": "jajoscript",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
