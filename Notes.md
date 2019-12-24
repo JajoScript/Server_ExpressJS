@@ -21,3 +21,47 @@ Es un framework para crear aplicaciónes web basado en Javascript.
 *   Routing.
 *   Middlewares.
 *   Plugins (as middlewares).
+
+**Template Engine**
+
+Un *template engine* es una implementación de software que sirve para mezclar datos y un template, mediante el template engine podemos generar un documento **Html**.
+
+    Data               Template
+      |                    |
+      --> Template Engine <-- 
+                |
+         Result document
+
+Algunos de los *template engine* más conocidos son:
+
+*   Handlebars (Javascript)
+*   Twig y Blade (Laravel / PHP)
+*   JSP (Java)
+*   Jinja (Python)
+
+**Creando tu propio template engine**
+
+Estructura general del *template engine*:
+
+    app.engine(<File extension>,<template engine callback>);
+
+Express ofrece el metodo *engine* para crear templates, el cual recibe 2 parametros generales: la *extención* del archivo y el *template engine callback*.
+
+Estructura especifica del *template engine*:
+
+    app.engine("extención", (filePath, options, callbak) => {})
+
+**Parametros**:
+
+*   Extención => extención del archivo.
+*   filePath => ruta del archivo.
+*   options => los datos que le vamos a pasar al template.
+*   callback => el regreso de todos los archivos que vamos a mostrar.
+
+**Finalmente**
+
+    app.set("views", "./views")
+    : Especificar el directorio de las vistas.
+
+    app.set("view engine", "extension")
+    : Registra el template engine.
